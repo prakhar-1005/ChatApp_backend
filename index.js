@@ -8,6 +8,7 @@ const cors = require('cors')
 const cookieParser = require('cookie-parser')
 const { createServer } = require("http");
 const { Server } = require("socket.io");
+const path = require('path');
 
 //express app
 const app = express();
@@ -23,10 +24,11 @@ app.use('/api/chat', chatRoutes)
 app.use('/api/message', messageRoutes)
 
 
+
 const io = new Server(httpServer, {
     pingTimeout:60000, 
     cors: {
-      origin: "https://00chit-chat00.netlify.app"
+      origin: "http://localhost:5173"
     }
   });
 
