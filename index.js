@@ -26,7 +26,7 @@ app.use('/api/message', messageRoutes)
 const io = new Server(httpServer, {
     pingTimeout:60000, 
     cors: {
-      origin: "https://00chit-chat00.netlify.app/"
+      origin: "https://00chit-chat00.netlify.app"
     }
   });
 
