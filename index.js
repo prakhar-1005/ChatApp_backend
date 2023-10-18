@@ -79,7 +79,7 @@ io.on("connection", (socket) => {
 mongoose.connect(process.env.MONGO_URI)  
     .then(()=>{
         // listen for requests
-        httpServer.listen(4000, ()=>{
+        httpServer.listen(process.env.PORT||4000, ()=>{
             console.log('server is connected to database and listening on port 4000');
         })
     })
